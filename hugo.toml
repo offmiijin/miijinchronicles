@@ -1,5 +1,5 @@
-baseURL = '/'
-locale = 'pt-br'
+baseURL = 'https://miijinchronicles.com/'
+locale = 'pt-BR'
 title = 'MII'
 
 [params]
@@ -8,11 +8,11 @@ title = 'MII'
   
   [params.meta]
     description = "Blog pessoal com posts sobre tecnologia, viagens e aprendizado. Migração do antigo blog A Table for Two."
-    keywords = "blog, tecnologia, viagens, aprendizado, hugo"
+    keywords = ["blog", "tecnologia", "viagens", "aprendizado", "hugo"]
   
   [params.nav]
     about = "/#about"
-    posts = "/posts/"
+    posts = "/mii/posts/"
     tft = "/tft/"
     tags = "/tags/"
 
@@ -25,12 +25,12 @@ title = 'MII'
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
-    url = "/posts/"
+    url = "/mii/posts/"
     weight = 20
   [[menu.main]]
     identifier = "chronicles"
     name = "Crônicas"
-    url = "/chronicles/"
+    url = "/mii/chronicles/"
     weight = 25
   [[menu.main]]
     identifier = "tft"

@@ -5,9 +5,11 @@
     {{ if .Pages }}
         {{ range .Pages.GroupBy "Section" }}
         {{ $sectionName := .Key }}
+        {{ if eq .Key "mii" }}{{ $sectionName = "MII" }}{{ end }}
+        {{ if eq .Key "tft" }}{{ $sectionName = "TFT" }}{{ end }}
         {{ $sectionPages := .Pages }}
 
-        <h2 class="posts-year">{{ $sectionName | title }}</h2>
+        <h2 class="posts-year">{{ $sectionName }}</h2>
 
         {{ $first := true }}
         {{ range $sectionPages.GroupByDate "2006" }}

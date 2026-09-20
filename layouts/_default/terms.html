@@ -2,24 +2,24 @@
 <div class="container list-posts">
     <h1 class="list-title">{{ i18n "tags" }}</h1>
 
-    {{/* --- Tags do Blog Principal (posts/) --- */}}
-    {{ $blogPages := where .Site.RegularPages "Section" "posts" }}
-    {{ $blogTags := slice }}
-    {{ range $blogPages }}
+    {{/* --- Tags do MII (mii/) --- */}}
+    {{ $miiPages := where .Site.RegularPages "Section" "mii" }}
+    {{ $miiTags := slice }}
+    {{ range $miiPages }}
         {{ range .Params.tags }}
-            {{ $blogTags = $blogTags | append . }}
+            {{ $miiTags = $miiTags | append . }}
         {{ end }}
     {{ end }}
-    {{ $blogTagsUnique := $blogTags | uniq | sort }}
+    {{ $miiTagsUnique := $miiTags | uniq | sort }}
 
-    {{ if $blogTagsUnique }}
-    <h2 class="posts-year">Posts</h2>
+    {{ if $miiTagsUnique }}
+    <h2 class="posts-year">MII</h2>
     <ul class="tags-section">
-        {{ range $blogTagsUnique }}
+        {{ range $miiTagsUnique }}
         {{ $tagName := . }}
         {{ $tagPage := $.Site.GetPage (printf "/tags/%s" ($tagName | urlize)) }}
         {{ $count := 0 }}
-        {{ range $blogPages }}
+        {{ range $miiPages }}
             {{ if in .Params.tags $tagName }}
                 {{ $count = add $count 1 }}
             {{ end }}
@@ -68,7 +68,7 @@
     </ul>
     {{ end }}
 
-    {{ if and (not $blogTagsUnique) (not $tftTagsUnique) }}
+    {{ if and (not $miiTagsUnique) (not $tftTagsUnique) }}
     <p>{{ i18n "nothing" }}</p>
     {{ end }}
 </div>

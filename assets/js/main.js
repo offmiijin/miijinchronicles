@@ -58,17 +58,29 @@ function ready() {
         });
     }
 
-    document.getElementById('hamburger-menu-toggle').addEventListener('click', () => {
-        const hamburgerMenu = document.getElementsByClassName('nav-hamburger-list')[0]
-        const hamburgerMenuToggleTarget = document.getElementById("hamburger-menu-toggle-target")
+    const hamburgerToggle = document.getElementById('hamburger-menu-toggle');
+    const hamburgerMenu = document.getElementsByClassName('nav-hamburger-list')[0];
+    const hamburgerMenuToggleTarget = document.getElementById("hamburger-menu-toggle-target");
+
+    function closeHamburgerMenu() {
+        hamburgerMenu.classList.add('visibility-hidden');
+        hamburgerMenuToggleTarget.setAttribute("aria-checked", "false");
+    }
+
+    hamburgerToggle.addEventListener('click', () => {
         if (hamburgerMenu.classList.contains('visibility-hidden')) {
             hamburgerMenu.classList.remove('visibility-hidden');
             hamburgerMenuToggleTarget.setAttribute("aria-checked", "true");
         } else {
-            hamburgerMenu.classList.add('visibility-hidden');
-            hamburgerMenuToggleTarget.setAttribute("aria-checked", "false");
+            closeHamburgerMenu();
         }
-    })
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!hamburgerToggle.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+            closeHamburgerMenu();
+        }
+    });
 }
 
 window.addEventListener('scroll', () => {
