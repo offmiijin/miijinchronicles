@@ -6,10 +6,6 @@ date: 2026-05-31
 
 # Posts
 
-Esta seção contém meus artigos pessoais sobre tecnologia, desenvolvimento, viagens e aprendizado.
+Esta seção contém meus textos pessoais sobre tecnologia, desenvolvimento, viagens e aprendizado.
 
-Em breve postarei meus primeiros conteúdos aqui!
-
----
-
-*Todas as postagens serão listadas aqui, organizadas por data e tags.*
+Todas as postagens são listadas por data e podem ser exploradas pelas tags.

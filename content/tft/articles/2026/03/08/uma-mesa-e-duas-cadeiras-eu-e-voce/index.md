@@ -1,7 +1,6 @@
 ---
 article: true
 date: 2026-03-08T14:39:21-03:00
-image: "/images/tft-introducao.jpg"
 lastmod: 2026-03-08
 showTableOfContents: false
 tags: ["apresentação", "blog", "conhecimento", "desenvolvimento"]

@@ -1,4 +1,4 @@
-{{ if findRE "<li>" .TableOfContents 1 }}
+{{ if and (ne .Params.showTableOfContents false) (findRE "<li>" .TableOfContents 1) }}
 <aside class="post-toc">
     {{ if eq .Section "chronicles" }}
         <p class="toc-label">Nesta Crônica</p>

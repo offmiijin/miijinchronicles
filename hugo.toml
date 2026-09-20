@@ -1,16 +1,16 @@
-baseURL = '/'
-locale = 'pt-br'
+baseURL = 'https://miijinchronicles.com/'
+locale = 'pt-BR'
 title = 'MII'
 
 [params]
   avatarURL = "/images/avatar.webp"
   avatarSize = "size-l"
-  favicon = "/favicon.ico"
+  favicon = "/favicon.svg"
   customHeadHTML = '<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" type="text/css" href="/css/custom.css">'
   
   [params.meta]
     description = "Blog pessoal com posts sobre tecnologia, viagens e aprendizado. Migração do antigo blog A Table for Two."
-    keywords = "blog, tecnologia, viagens, aprendizado, hugo"
+    keywords = ["blog", "tecnologia", "viagens", "aprendizado", "hugo"]
   
   [params.nav]
     about = "/#about"

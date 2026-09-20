@@ -3,7 +3,8 @@
     <h1 class="list-title">Articles</h1>
 
     {{/* Obtém artigos com frontmatter article: true da seção tft */}}
-    {{ $articles := where .Site.RegularPages "Params.article" true }}
+    {{ $tftPages := where .Site.RegularPages "Section" "tft" }}
+    {{ $articles := where $tftPages "Params.article" true }}
 
     {{ if $articles }}
     {{ $first := true }}

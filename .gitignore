@@ -11,3 +11,6 @@ Thumbs.db
 
 # Agents
 .agents/
+.pi/
+.sandbox-cache/
+.codegraph/

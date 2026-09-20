@@ -1,7 +1,6 @@
 ---
 article: true
 date: 2026-03-24T02:59:27-03:00
-image: "/images/efeito-borboleta.jpg"
 lastmod: 2026-03-24
 showTableOfContents: false
 tags: ["linux", "notícia", "opensource", "tecnologia", "lei", "brasil"]
