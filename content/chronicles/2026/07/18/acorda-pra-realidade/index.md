@@ -1,7 +1,6 @@
 ---
 date: 2026-07-18T10:00:00-03:00
 # description: ""
-# image: ""
 lastmod: 2026-07-18
 showTableOfContents: false
 tags: ["realidade", "reflexão", "niilismo", "autoconhecimento", "responsabilidade", "crônica"]

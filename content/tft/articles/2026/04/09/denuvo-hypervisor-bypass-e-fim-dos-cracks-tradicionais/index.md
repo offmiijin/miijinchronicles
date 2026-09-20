@@ -1,7 +1,6 @@
 ---
 article: true
 date: 2026-04-09T21:18:36-03:00
-image: "/images/denuvo-bypass.jpg"
 lastmod: 2026-04-09
 showTableOfContents: false
 tags: ["windows", "pirataria", "segurança", "tecnologia", "denuvo", "crack"]

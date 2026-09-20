@@ -1,7 +1,6 @@
 ---
 date: 2026-08-09T03:23:42-03:00
 # description: ""
-# image: ""
 lastmod: 2026-08-09
 showTableOfContents: true
 tags: ["vícios", "trabalho", "música", "cafeína", "autoconhecimento", "reflexão", "hábitos"]

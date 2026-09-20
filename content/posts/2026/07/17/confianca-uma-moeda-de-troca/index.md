@@ -1,7 +1,6 @@
 ---
 date: 2026-07-17T14:00:00-03:00
 # description: ""
-# image: ""
 lastmod: 2026-07-17
 showTableOfContents: true
 tags: ["confiança", "relacionamentos", "reflexão", "psicologia", "auto-sabotagem", "comunicação", "autoconhecimento"]

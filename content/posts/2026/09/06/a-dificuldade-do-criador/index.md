@@ -1,7 +1,6 @@
 ---
 date: 2026-09-06T00:00:00-03:00
 # description: ""
-# image: ""
 lastmod: 2026-09-06
 showTableOfContents: false
 tags: ["criatividade", "escrita", "redes sociais", "autenticidade", "reflexão", "autoconhecimento"]

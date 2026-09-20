@@ -1,7 +1,6 @@
 ---
 date: 2026-06-04T14:26:06-03:00
 # description: ""
-# image: ""
 lastmod: 2026-06-04
 showTableOfContents: false
 # tags: ["",]
