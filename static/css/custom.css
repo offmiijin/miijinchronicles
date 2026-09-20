@@ -60,11 +60,6 @@
     color: var(--sketch-accent) !important;
 }
 
-/* Avatar hover effect (não conflita com TFT) */
-.avatar img:hover {
-    transform: scale(1.05);
-}
-
 /* =============================================
    Mobile Responsive (≤ 820px)
    ============================================= */

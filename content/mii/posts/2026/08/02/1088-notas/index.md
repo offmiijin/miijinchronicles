@@ -1,7 +1,6 @@
 ---
 date: 2026-08-02T23:25:41-03:00
 # description: ""
-# image: ""
 lastmod: 2026-08-02
 showTableOfContents: true
 tags: ["anotações", "escrita", "autoconhecimento", "reflexão", "diário", "hábitos"]

@@ -1,7 +1,6 @@
 ---
 date: 2026-07-15T14:26:06-03:00
 # description: ""
-# image: ""
 lastmod: 2026-07-15
 showTableOfContents: false
 tags: ["privacidade", "redes sociais", "reflexão", "relacionamentos", "autenticidade", "vida real"]

@@ -1,7 +1,6 @@
 ---
 date: 2026-09-20T00:00:00-03:00
 # description: ""
-# image: ""
 lastmod: 2026-09-20
 showTableOfContents: false
 title: "Um Tributo Para Meu Falecido Amigo"

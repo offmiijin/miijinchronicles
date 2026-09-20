@@ -3,8 +3,6 @@ locale = 'pt-BR'
 title = 'MII'
 
 [params]
-  avatarURL = "/images/avatar.webp"
-  avatarSize = "size-l"
   favicon = "/favicon.svg"
   customHeadHTML = '<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" type="text/css" href="/css/custom.css">'
   

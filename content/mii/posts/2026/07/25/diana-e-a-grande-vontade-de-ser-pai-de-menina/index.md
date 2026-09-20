@@ -1,7 +1,6 @@
 ---
 date: 2026-07-25T04:00:00-03:00
 # description: ""
-# image: ""
 lastmod: 2026-07-25
 showTableOfContents: true
 tags: ["pragmata", "diana", "paternidade", "videogames", "psicologia", "emoção", "reflexão"]
