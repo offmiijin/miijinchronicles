@@ -10,9 +10,7 @@
 <div class="container list-posts">
     <h1 class="list-title">{{ .Title }}</h1>
 
-    {{/* Lista todos os artigos TFT (regular pages), mesmo aninhados em subseções */}}
-    {{ $pages := where .Site.RegularPages "Section" "tft" }}
-
+    {{ $pages := where .Site.RegularPages "Section" "mii" }}
     {{ if $pages }}
     {{ $first := true }}
     {{ range $pages.GroupByDate "2006" }}
@@ -23,7 +21,7 @@
     {{ $first = false }}
     <h2 class="posts-year">{{ (time.Format "2006" (index .Pages 0).Date) }} — {{ (time.Format "January" (index .Pages 0).Date) | title }}</h2>
     <ul class="post-list">
-        {{ range .Pages }}
+        {{ range .Pages.ByDate.Reverse }}
         <li class="post-item">
             <span class="post-date">{{ .Date.Format "02/01" }}</span>
             <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>

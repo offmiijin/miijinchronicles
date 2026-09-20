@@ -1,6 +1,7 @@
 {{ if and (ne .Params.showTableOfContents false) (findRE "<li>" .TableOfContents 1) }}
+{{ $isChronicle := hasPrefix .RelPermalink (relURL "mii/chronicles/") }}
 <aside class="post-toc">
-    {{ if eq .Section "chronicles" }}
+    {{ if $isChronicle }}
         <p class="toc-label">Nesta Crônica</p>
     {{ else if eq .Section "tft" }}
         {{ if .Params.Article }}

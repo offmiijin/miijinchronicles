@@ -4,6 +4,8 @@ description: "Artigos do A Table For Two — tecnologia, notícias e opinião"
 date: 2026-05-31
 ---
 
-# TFT — A Table For Two
+# A Table For Two
 
-Artigos publicados no projeto A Table For Two, abordando tecnologia, notícias e reflexões.
+Um espaço para compartilhar conhecimento, opiniões e reflexões sobre tecnologia, desenvolvimento e os assuntos que atravessam nossas vidas.
+
+A TFT reúne posts e artigos escritos para promover conversas, aprendizados e discussões além da computação.

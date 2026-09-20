@@ -14,7 +14,7 @@ title = 'MII'
   
   [params.nav]
     about = "/#about"
-    posts = "/posts/"
+    posts = "/mii/posts/"
     tft = "/tft/"
     tags = "/tags/"
 
@@ -27,12 +27,12 @@ title = 'MII'
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
-    url = "/posts/"
+    url = "/mii/posts/"
     weight = 20
   [[menu.main]]
     identifier = "chronicles"
     name = "Crônicas"
-    url = "/chronicles/"
+    url = "/mii/chronicles/"
     weight = 25
   [[menu.main]]
     identifier = "tft"
