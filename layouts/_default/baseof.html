@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="{{ .Site.Language.Locale | default "pt-BR" }}" data-theme="light">
     {{- $avatarImgSrc := .Site.Params.AvatarURL -}}
     {{- if and (isset .Site.Params "avatarURL") (not (hasPrefix $avatarImgSrc "http")) -}}
         {{- $avatarImgSrc = (urls.JoinPath $.Site.BaseURL ($.Site.Params.AvatarURL | default "")) -}}
@@ -19,6 +19,7 @@
         (function() {
             var path = window.location.pathname;
             var isTftPage = path.startsWith('/tft/');
+            var isMiiPage = path.startsWith('/mii/');
             var isHomePage = path === '/' || path === '';
             var isTagsPage = path.startsWith('/tags/');
             var lastSection = sessionStorage.getItem('lastSection');
@@ -26,7 +27,7 @@
             // Salva a seção atual
             if (isTftPage) {
                 sessionStorage.setItem('lastSection', 'tft');
-            } else if (isHomePage) {
+            } else if (isHomePage || isMiiPage) {
                 sessionStorage.setItem('lastSection', 'main');
             }
 

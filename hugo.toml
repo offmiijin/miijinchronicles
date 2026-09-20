@@ -1,20 +1,20 @@
-baseURL = '/'
-locale = 'pt-br'
+baseURL = 'https://miijinchronicles.com/'
+locale = 'pt-BR'
 title = 'MII'
 
 [params]
   avatarURL = "/images/avatar.webp"
   avatarSize = "size-l"
-  favicon = "/favicon.ico"
+  favicon = "/favicon.svg"
   customHeadHTML = '<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" type="text/css" href="/css/custom.css">'
   
   [params.meta]
     description = "Blog pessoal com posts sobre tecnologia, viagens e aprendizado. Migração do antigo blog A Table for Two."
-    keywords = "blog, tecnologia, viagens, aprendizado, hugo"
+    keywords = ["blog", "tecnologia", "viagens", "aprendizado", "hugo"]
   
   [params.nav]
     about = "/#about"
-    posts = "/posts/"
+    posts = "/mii/posts/"
     tft = "/tft/"
     tags = "/tags/"
 
@@ -27,12 +27,12 @@ title = 'MII'
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
-    url = "/posts/"
+    url = "/mii/posts/"
     weight = 20
   [[menu.main]]
     identifier = "chronicles"
     name = "Crônicas"
-    url = "/chronicles/"
+    url = "/mii/chronicles/"
     weight = 25
   [[menu.main]]
     identifier = "tft"

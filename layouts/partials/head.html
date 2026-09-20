@@ -22,9 +22,10 @@
     </script>
 
     {{ $title := .Title | markdownify | default .Site.Title }}
-    {{ $description := ((.Description | default (.Summary | default .Content) | default .Site.Params.Description) | plainify | truncate 160) }}
+    {{ $siteDescription := .Site.Params.Meta.Description | default .Site.Params.Description }}
+    {{ $description := ((.Description | default (.Summary | default .Content) | default $siteDescription) | plainify | truncate 160) }}
     {{ $image := .Params.image | default (.Scratch.Get "avatarImgSrc") }}
-    {{ $siteKeywords := .Site.Params.MetaKeywords | default (slice) }}
+    {{ $siteKeywords := .Site.Params.Meta.Keywords | default .Site.Params.Keywords | default (slice) }}
     {{ $postKeywords := .Params.tags | default (slice) }}
     {{ $keywords := union $siteKeywords $postKeywords }}
 
@@ -51,7 +52,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{ $cssNormalize := resources.Get "css/normalize.min.css" }}
-    <link rel="stylesheet" type="text/css" href="{{ $cssNormalize.RelPermalink }}" media="print">
+    <link rel="stylesheet" type="text/css" href="{{ $cssNormalize.RelPermalink }}">
 
     {{ $cssMain := resources.Get "css/main.css" | minify }}
     <link rel="stylesheet" type="text/css" href="{{ $cssMain.RelPermalink }}">
