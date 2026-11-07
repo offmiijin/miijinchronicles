@@ -1,0 +1,8 @@
+# Cloudflare Workers (Static Assets) — https://developers.cloudflare.com/workers/static-assets/redirects/
+# 301 em vez do stub <meta http-equiv="refresh"> que o Hugo gera para os aliases.
+# /posts/ e /chronicles/ na raiz não têm conteúdo real (só aliases de seção),
+# então o splat pode cobrir tudo sob esses prefixos com segurança.
+/posts        /mii/posts/            301
+/posts/*      /mii/posts/:splat      301
+/chronicles   /mii/chronicles/       301
+/chronicles/* /mii/chronicles/:splat 301

@@ -1,0 +1,19 @@
+# Cloudflare Workers (Static Assets) — https://developers.cloudflare.com/workers/static-assets/headers/
+# O Hugo copia static/ para public/; o Workers lê o arquivo e não o serve.
+#
+# Sem Cache-Control customizado de propósito: os assets já saem com
+# `Cache-Control: public, max-age=0, must-revalidate` + ETag (304 no browser).
+# Cache longo só valeria para arquivos fingerprinted — hoje só o JS é; nenhum
+# CSS é (main.min.css, dark.min.css, normalize.min.css, tft.css, custom.css
+# têm nome fixo e serviriam versão velha).
+
+# workers.dev não deve competir com o domínio canônico: o baseURL fixo já aponta
+# canonical e links internos para miijinchronicles.com.
+https://miijinchronicles.miyake-developer.workers.dev/*
+  X-Robots-Tag: noindex
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
