@@ -1,0 +1,19 @@
+# Cloudflare Workers (Static Assets) — https://developers.cloudflare.com/workers/static-assets/
+name = "miijinchronicles"
+compatibility_date = "2026-11-07"
+
+# O Hugo escreve o site em public/; é esse diretório que o wrangler publica.
+# Sem `main`: o Worker é assets-only, nenhuma requisição é cobrada.
+[assets]
+directory = "./public"
+# Sem isto o Workers devolve uma 404 seca (null-body); com isto serve o 404.html do Hugo.
+not_found_handling = "404-page"
+# Hugo usa pretty URLs (/post/index.html) → barra final preservada.
+html_handling = "auto-trailing-slash"
+
+# Rodado antes do deploy (também é o build usado pelo Workers Builds no CI).
+[build]
+command = "hugo build"
+
+# HUGO_VERSION NÃO vai aqui: `[vars]` são variáveis de runtime do Worker, não do
+# build. Configure em Workers > miijinchronicles > Settings > Build > Variables.

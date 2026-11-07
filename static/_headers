@@ -1,26 +1,19 @@
-# Cloudflare Pages — https://developers.cloudflare.com/pages/configuration/headers/
-# Copiado de static/ para public/ pelo Hugo; o Pages consome e não serve o arquivo.
+# Cloudflare Workers (Static Assets) — https://developers.cloudflare.com/workers/static-assets/headers/
+# O Hugo copia static/ para public/; o Workers lê o arquivo e não o serve.
+#
+# Sem Cache-Control customizado de propósito: os assets já saem com
+# `Cache-Control: public, max-age=0, must-revalidate` + ETag (304 no browser).
+# Cache longo só valeria para arquivos fingerprinted — hoje só o JS é; nenhum
+# CSS é (main.min.css, dark.min.css, normalize.min.css, tft.css, custom.css
+# têm nome fixo e serviriam versão velha).
 
-# O bundle JS é fingerprintado (sha256 no nome) → a URL muda a cada alteração,
-# então cache eterno é seguro.
-/js/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# O CSS não é fingerprintado → cache curto, com revalidação em background.
-/css/*
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
-
-/favicon.svg
-  Cache-Control: public, max-age=604800
-
-# Evita conteúdo duplicado: o domínio real é miijinchronicles.com (ver canonical
-# no head), então as URLs do Pages não devem ser indexadas.
-https://:project.pages.dev/*
-  X-Robots-Tag: noindex
-
-https://:version.:project.pages.dev/*
+# workers.dev não deve competir com o domínio canônico: o baseURL fixo já aponta
+# canonical e links internos para miijinchronicles.com.
+https://miijinchronicles.miyake-developer.workers.dev/*
   X-Robots-Tag: noindex
 
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
