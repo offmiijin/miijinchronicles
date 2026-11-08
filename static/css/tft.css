@@ -508,11 +508,12 @@ code {
   color: #374151;
 }
 
+/* Blocos de código: sem decoração sketch — visual de terminal */
 pre {
-  background: var(--sketch-bg-lines);
-  border: 2px solid var(--sketch-border);
-  border-radius: 85% 15% 80% 20% / 15% 85% 15% 85%;
-  box-shadow: 4px 4px 0px rgba(17, 24, 39, 0.04);
+  background: var(--light-tertiary-color);
+  border: none;
+  border-radius: 6px;
+  box-shadow: none;
   padding: 1.2rem;
   overflow-x: auto;
 }
@@ -522,6 +523,7 @@ pre code {
   background: none;
   border-radius: 0;
   padding: 0;
+  color: #f8f8f2;
 }
 
 /* ---------------------------------------------
@@ -619,10 +621,6 @@ html[data-theme="dark"] .tag:hover {
 
 html[data-theme="dark"] blockquote {
   box-shadow: 3px 3px 0px rgba(243, 244, 246, 0.03);
-}
-
-html[data-theme="dark"] pre {
-  box-shadow: 4px 4px 0px rgba(243, 244, 246, 0.04);
 }
 
 html[data-theme="dark"] code {
