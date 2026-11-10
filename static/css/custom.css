@@ -61,9 +61,64 @@
 }
 
 /* =============================================
+   Botão de copiar bloco de código
+   ============================================= */
+.code-block {
+    position: relative;
+}
+
+.copy-code {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    color: #e5e7eb;
+    /* um pouco mais escuro que o fundo do bloco (#2d333b / #272822) */
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+/* Só aparece com o cursor sobre o bloco de código (ou foco via teclado) */
+.code-block:hover .copy-code,
+.copy-code:focus-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.copy-code:hover,
+.copy-code:focus-visible {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.copy-code.is-copied {
+    opacity: 1;
+    pointer-events: auto;
+    color: #6ee7b7;
+    border-color: rgba(110, 231, 183, 0.5);
+}
+
+/* =============================================
    Mobile Responsive (≤ 820px)
    ============================================= */
 @media only screen and (max-width: 820px) {
+
+    /* `main#content` é flex item de `body` (flex column): com `width: auto`
+       ele cresce até o conteúdo (linhas longas em <pre>), deixando a página
+       mais larga que a tela. Fixa a largura na viewport. */
+    main#content {
+        width: 100%;
+        max-width: 100%;
+    }
 
     /* Oculta ToC e label no mobile */
     .toc-label,
@@ -121,6 +176,12 @@
     /* Item de lista com touch target adequado */
     .post-item {
         padding: 0.5rem 0;
+    }
+
+    /* Sem hover no touch: botão sempre visível e clicável */
+    .copy-code {
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .post-item a {

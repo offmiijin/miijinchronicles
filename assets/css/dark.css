@@ -79,7 +79,7 @@ pre {
 }
 
 :not(pre) > code {
-  background-color: var(--dark-tertiary-color) !important;
+  background-color: var(--dark-secondary-color) !important;
   color: var(--dark-text-color);
 }
 
