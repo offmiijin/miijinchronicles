@@ -1,14 +1,14 @@
 ---
 article: true
-date: 2026-11-08T00:39:37-03:00
-lastmod: 2026-11-08
+date: 2026-11-15T00:39:37-03:00
+lastmod: 2026-11-15
 showTableOfContents: true
 title: "Migrando Meu Blog — Do \"Enter\" ao Seu Navegador (e o Servidor Que Não Existe)"
 tags: ["cloudflare workers", "dns", "tls", "hugo", "infraestrutura", "migração"]
 slug: "migrando-meu-blog-do-enter-ao-seu-navegador"
 aliases: [
-  "/tft/posts/2026/11/08/migrando-meu-blog-do-enter-ao-seu-navegador/",
-  "/2026/11/08/migrando-meu-blog-do-enter-ao-seu-navegador/",
+  "/tft/posts/2026/11/15/migrando-meu-blog-do-enter-ao-seu-navegador/",
+  "/2026/11/15/migrando-meu-blog-do-enter-ao-seu-navegador/",
   "/migrando-meu-blog-do-enter-ao-seu-navegador/"
 ]
 ---
